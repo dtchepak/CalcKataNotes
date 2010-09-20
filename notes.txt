@@ -1,7 +1,0 @@
-﻿
-Turn it up to 11
-
-SRP gone mad: classes coordinate dependencies, or do some work. Not both.
-
-
-
