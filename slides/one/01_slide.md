@@ -108,11 +108,12 @@ _Not both_
 # Maintainable tests and code
 * Refactor via tweaking contexts
 * Lots of small objects makes it easier to replace big bits of behaviour
+* Case in point: NSubstitute
 
 !SLIDE bullets center transition=scrollLeft
-# Sometimes this is actually useful!
-* NSubstitute
+#More pragmatic approaches
 * Defactoring
+* Switching styles as required
 
 !SLIDE bullets center transition=scrollLeft
 #THANKS!
