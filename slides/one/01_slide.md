@@ -30,20 +30,20 @@ _(src: http://www.city-data.com/forum/science-technology/331224-theoritical-quan
 #String Calculator Kata
 
     @@@ csharp
-    "" --> 0
-    "1,2,3" --> 6
-    "1\n2,3,4" --> 10
+    "" → 0
+    "1,2,3" → 6
+    "1\n2,3,4" → 10
 
     //Extra requirement: custom delimiters
-    "//;\n5;6;7" --> 18
+    "//;\n5;6;7" → 18
 
-!SLIDE bullets center transition=scrollLeft
+!SLIDE bullets transition=scrollLeft
 #Why the dodgy example?
 * Lends itself perfectly to traditional TDD
 * Highlights the differences in OOO style.
 * Can fit into ~30 minutes.
 
-!SLIDE bullets incremental center transition=scrollLeft
+!SLIDE bullets incremental transition=scrollLeft
 #The sane approach
 * Build up an implementation one test at a time
 * Feed a bunch of test data through our method
@@ -58,6 +58,7 @@ _(src: http://www.city-data.com/forum/science-technology/331224-theoritical-quan
 
 !SLIDE bullets transition=scrollLeft
 # Take OO principles...
+* (SOLID, LoD, encapsulation, GRASP ...)
 
 !SLIDE center transition=scrollLeft
 #...and turn them up to 11
@@ -90,30 +91,44 @@ _Not both_
 
 !SLIDE bullets transition=scrollLeft
 #WAIT!!!
+* Some of this is _actually_ useful for real problems!
+
+!SLIDE bullets incremental transition=scrollLeft
+# A SOLID design emerged
+* Classes have ONE responsibility (SRP)
+* Extended behaviour (change number parsing) without major mods to classes (OCP)
+* Small, focused interfaces (ISP)
+* Class depend on abstractions, top-down (DIP)
+
+!SLIDE bullets incremental transition=scrollLeft
+# Flexible tests and maintainable code
+* Refactor via tweaking contexts
+* Trivial implementations
+* Small objects and abstractions → easier to change big bits of behaviour 
+
+!SLIDE bullets incremental transition=scrollLeft
+# How did this happen?
+* Over-enthusiastic SRP
+* Responsibility plus context → _scenario name_
+* How should SUT react? → _test name and assertion_
+* Why? → _Because()_
+* Sub-responsibilities → _dependencies; drive out via Context()_
+
+!SLIDE bullets transition=scrollLeft
+# Adding a dash of pragmatism
+* Switching styles as required
+* Defactoring
 
 !SLIDE bullets incremental center transition=scrollLeft
 #Take aways (fries with that?)
 
-!SLIDE bullets transition=scrollLeft
-# Dave is crazy
-
 !SLIDE bullets incremental transition=scrollLeft
-#TDD to help OO design
-* Decompose problems --> objects/classes
+# Use TDD to help OO design
+* Know and push the limits of OO (et al.)
+* Tests can provide mental framework for thinking about OO
+* Decompose problems → objects/classes
 * Responsibility assignment
-* Design, not implementation
-* Mental framework for thinking about OO
-
-!SLIDE bullets transition=scrollLeft
-# Maintainable tests and code
-* Refactor via tweaking contexts
-* Lots of small objects makes it easier to replace big bits of behaviour
-* Case in point: NSubstitute
-
-!SLIDE bullets center transition=scrollLeft
-#More pragmatic approaches
-* Defactoring
-* Switching styles as required
+* Test logic over data; drive design over implementation
 
 !SLIDE bullets center transition=scrollLeft
 #THANKS!
