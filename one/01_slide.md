@@ -148,7 +148,7 @@ _Not both_
 
 !SLIDE bullets incremental transition=scrollLeft
 # _test name and assertion_ 
-* → How should the SUT react?
+* → How should the subject react?
 
 !SLIDE bullets incremental transition=scrollLeft
 # Why? 
